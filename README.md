@@ -24,7 +24,7 @@ With this sample, you can :
 Clone this repository locally :
 
 ``` bash
-git clone https://github.com/maximegris/angular-electron.git
+git clone https://github.com/leecbryant/BaseDesktopApp.git
 ```
 
 Install dependencies with npm :
@@ -87,8 +87,3 @@ E2E Test scripts can be found in `e2e` folder.
 
 Note: To make it work behind a proxy, you can add this proxy exception in your terminal  
 `export {no_proxy,NO_PROXY}="127.0.0.1,localhost"`
-
-[build-badge]: https://travis-ci.org/maximegris/angular-electron.svg?branch=master&style=style=flat-square
-[build]: https://travis-ci.org/maximegris/angular-electron
-[license-badge]: https://img.shields.io/badge/license-Apache2-blue.svg?style=style=flat-square
-[license]: https://github.com/maximegris/angular-electron/blob/master/LICENSE.md
