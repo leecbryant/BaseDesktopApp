@@ -15,8 +15,12 @@ function createWindow(): BrowserWindow {
   win = new BrowserWindow({
     x: 0,
     y: 0,
-    width: size.width,
-    height: size.height,
+    // width: size.width,
+    // height: size.height,
+    height: 600,
+    width: 800,
+    // transparent: true, 
+    // frame: false,
     webPreferences: {
       nodeIntegration: true,
       allowRunningInsecureContent: (serve) ? true : false,
@@ -25,16 +29,17 @@ function createWindow(): BrowserWindow {
     },
   });
 
+  // Remove Menu Bar - "File"
+  win.setMenuBarVisibility(false);
+
   if (serve) {
-
     win.webContents.openDevTools();
-
     require('electron-reload')(__dirname, {
       electron: require(`${__dirname}/node_modules/electron`)
     });
     win.loadURL('http://localhost:4200');
-
   } else {
+    // win.webContents.openDevTools();
     win.loadURL(url.format({
       pathname: path.join(__dirname, 'dist/index.html'),
       protocol: 'file:',
